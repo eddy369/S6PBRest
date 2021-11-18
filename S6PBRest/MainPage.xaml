@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6PBRest.MainPage" NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Label Text="Consumir Web Service Get" HorizontalTextAlignment="Center" FontSize="28"/>
+        <ListView x:Name="MyListView" SelectedItem="{Binding codigo}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="txtCodigo" Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" FontSize="24"></Label>
+                                <Label x:Name="txtNombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" FontSize="24"></Label>
+                                <Label x:Name="txtApellido" Text="{Binding apellido}" Grid.Row="0" Grid.Column="2" FontSize="24"></Label>
+                                <Label x:Name="txtEdad" Text="{Binding edad}" Grid.Row="0" Grid.Column="3" FontSize="24"></Label>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Insertar" x:Name="btnGet" Clicked="btnGet_Clicked" FontSize="26"></Button>
+        <Button Text="Actualizar" x:Name="btnPut" Clicked="btnPut_Clicked" FontSize="26"></Button>
+        <Button Text="Eliminar" x:Name="btnElimine" Clicked="btnElimine_Clicked" FontSize="26"></Button>
+    </StackLayout>
+</ContentPage>

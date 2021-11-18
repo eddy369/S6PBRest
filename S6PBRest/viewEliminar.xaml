@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6PBRest.viewEliminar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ventana Eliminar" FontSize="28" />
+            <Label x:Name="texto" Text=""></Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="lblCodigo" IsReadOnly="True" Grid.Row="0" Grid.Column="0" FontSize="22"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnQuitar" Text="ELIMINE" Clicked="btnQuitar_Clicked" Grid.Row="0" Grid.Column="0" FontSize="22"/>
+                <Button x:Name="btnVuelva" Text="VOLVER" Clicked="btnVuelva_Clicked" Grid.Row="0" Grid.Column="1" FontSize="22"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

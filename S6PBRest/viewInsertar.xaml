@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6PBRest.viewInsertar"
+                          NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Insertar datos" FontSize="30"/>
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" FontSize="24"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" Keyboard="Text" FontSize="24"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido" Keyboard="Text" FontSize="24"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" Keyboard="Numeric" FontSize="24"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnGuardar" Text="Insertar" Clicked="btnGuardar_Clicked" Grid.Row="0" Grid.Column="0" FontSize="26"/>
+                <Button x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked" Grid.Row="0" Grid.Column="1" FontSize="26"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
